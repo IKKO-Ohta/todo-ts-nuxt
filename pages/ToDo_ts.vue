@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="ToDo">
-      <img class="Logo" src="./assets/vtCut.png" alt="Vue logo">
+      <img class="Logo" src="../assets/vtCut.png" alt="Vue logo">
       <h1 class="ToDo-Header">Vue-TS To Do</h1>
       <div class="ToDo-Container">
         <div class="ToDo-Content">
@@ -16,12 +16,12 @@
 
 
 <script lang='ts'>
-import ToDoItem from "./components/ToDoItem.vue";
-import { Vue, Component, Prop } from "vue-property-decorator"; //vue.ts official library
+import ToDoItem from '../components/ToDoItem.vue'
+import { Vue, Component, Prop } from 'vue-property-decorator' //vue.ts official library
 
 interface ATodo {
-  id: number;
-  text: string;
+  id: number
+  text: string
 }
 
 @Component({
@@ -31,27 +31,27 @@ export default class ToDo extends Vue {
   @Prop() list: ATodo[] = [
     {
       id: 1,
-      text: "clean the house"
+      text: 'clean the house'
     },
     {
       id: 2,
-      text: "buy chocolates"
+      text: 'buy chocolates'
     }
-  ];
-  @Prop() todo: string = "";
+  ]
+  @Prop() todo: string = ''
 
   createNewToDoItem() {
     if (!this.todo) {
-      alert("Please enter a todo!");
-      return;
+      alert('Please enter a todo!')
+      return
     }
-    const newId = Math.max.apply(null, this.list.map((t: ATodo) => t.id)) + 1;
-    this.list.push({ id: newId, text: this.todo });
-    this.todo = "";
+    const newId = Math.max.apply(null, this.list.map((t: ATodo) => t.id)) + 1
+    this.list.push({ id: newId, text: this.todo })
+    this.todo = ''
   }
 
   onDeleteItem(todo: ATodo) {
-    this.list = this.list.filter((item: ATodo) => item !== todo);
+    this.list = this.list.filter((item: ATodo) => item !== todo)
   }
 }
 </script>

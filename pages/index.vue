@@ -1,23 +1,13 @@
 <template>
   <section class="container">
     <div>
-      <logo />
-      <h1 class="title">
-        todo-Nuxt
-      </h1>
-      <h2 class="subtitle">
-        My brilliant Nuxt.js project
-      </h2>
+      <logo/>
+      <h1 class="title">todo-Vue+TS-Nuxt</h1>
+      <h2 class="subtitle">My brilliant Nuxt.js project</h2>
+      <h2 class="subtitle">add header&footer b</h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-          >Documentation</a
-        >
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-          >GitHub</a
-        >
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
+        <nuxt-link to="/ToDo_ts" class="button--grey">todo APP</nuxt-link>
       </div>
     </div>
   </section>
@@ -27,6 +17,7 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  layout: 'addBarStyle',
   components: {
     Logo
   }
