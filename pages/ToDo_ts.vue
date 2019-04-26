@@ -40,6 +40,8 @@ export default class ToDo extends Vue {
   ]
   @Prop() todo: string = ''
 
+  layout: string = 'addBar'
+
   createNewToDoItem() {
     if (!this.todo) {
       alert('Please enter a todo!')
@@ -60,16 +62,15 @@ export default class ToDo extends Vue {
 body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(#aeffae, #3d99ff);
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
     Arial, sans-serif;
-  background: linear-gradient(#aeffae, #3d99ff);
   height: auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .Logo {
   width: 400px;
   padding: 10px;

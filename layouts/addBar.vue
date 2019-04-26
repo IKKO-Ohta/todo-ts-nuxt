@@ -1,8 +1,8 @@
 <template>
   <div>
-    <my-header>
+    <my-header/>
     <nuxt/>
-    <my-footer>
+    <my-footer/>
   </div>
 </template>
 
@@ -11,13 +11,14 @@ import MyHeader from '~/components/header.vue'
 import MyFooter from '~/components/footer.vue'
 
 export default {
-  name: 'addBarStyle',
+  name: 'addBar',
   components: {
     MyHeader,
     MyFooter
   }
 }
 </script>
+
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

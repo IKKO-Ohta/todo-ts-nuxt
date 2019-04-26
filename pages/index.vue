@@ -17,7 +17,7 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
-  layout: 'addBarStyle',
+  layout: 'addBar',
   components: {
     Logo
   }
@@ -27,7 +27,7 @@ export default {
 <style>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
